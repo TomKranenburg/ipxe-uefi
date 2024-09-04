@@ -1,4 +1,18 @@
-Merged with GPT boot functionality patch. Ready for deployment.
+First pull down the repository using the following command:
+
+```bash
+
+sudo git clone https://github.com/TomKranenburg/ipxe-uefi
+
+```
+
+Then navigate into the newly created directory:
+
+```bash
+
+cd ./ipxe-uefi/src
+
+```
 
 ## Compile Instructions
 
