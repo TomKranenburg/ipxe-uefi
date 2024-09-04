@@ -43,3 +43,13 @@ For example: ```tftp://10.1.0.3/vanguard/single/10.1.5.20.ipxe```
 
 This allows for host specific menus to be deployed per system. Notice the file paths are hard coded. Any change to file paths will sadly require a recompile.
 If this IP specific menu is not present it then checks for a default menu. 
+
+Now place the bootloader in: 
+
+```bash
+
+/var/www/html/vanguard
+
+```
+
+This will then be delivered via the DHCP during boot.
