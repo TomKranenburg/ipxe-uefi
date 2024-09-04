@@ -1,0 +1,9 @@
+#!ipxe
+dhcp && goto netboot || goto dhcperror
+
+:dhcperror
+prompt --key s --timeout 10000 DHCP failed, hit 's' for the iPXE shell; reboot in 10 seconds && shell
+
+:netboot
+chain http://${next-server}/vanguard/main.ipxe ||
+prompt --key s --timeout 10000 Chainloading failed, hit 's' for the iPXE shell; reboot in 10 seconds. Do not change file paths without recompiling! - Thomas Kranenburg && shell
